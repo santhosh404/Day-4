@@ -12,7 +12,7 @@
                 }
 
                 //Function call and priting the output to console
-                console.log(`1. a. Odd Numbers array by Anonymous Function: ${oddNumbersArrayByAnonymousFunction([1, 2, 3, 4, 5, 6, 7, 8, 34, 33, 121, 0, 55])}`)
+                console.log(`1. a. Odd Numbers array by Anonymous Function: ${oddNumbersArrayByAnonymousFunction([1, 2, 3, 4, 5, 6, 7, 8, 34, 33, 121, 0, 55])}`);
 
                 /*
                     Input: [1, 2, 3, 4, 5, 6, 7, 8, 34, 33, 121, 0, 55]
@@ -23,12 +23,10 @@
         //* Using IIFE function
 
                 //Function definition
-                const oddNumbersArrayByIIFEFunction = (
-                    function(arr) {
+                (function(arr) {
                         const odd = arr.filter(num => num % 2 !== 0)
                         console.log(`1. a. Odd Numbers array by IIFE Function: ${JSON.stringify(odd)}`);
-                    }
-                )([1, 2, 3, 4, 5, 6, 7, 8, 34, 33, 121, 0, 55])
+                })([1, 2, 3, 4, 5, 6, 7, 8, 34, 33, 121, 0, 55]);
 
                 /*
                     Input: [1, 2, 3, 4, 5, 6, 7, 8, 34, 33, 121, 0, 55]
@@ -64,14 +62,14 @@
         //* Using IIFE function
 
                 //Function definition
-                const titleCapsArrayByIIFEFunction = (function(arr) {
+                (function(arr) {
                     let result = [];
                     for(let a of arr) {
                         const titleCapsArr = a.split(' ').map(d => d.charAt(0).toUpperCase() + d.slice(1).toLowerCase());
                         result.push(titleCapsArr.join(' '));
                     }
                     console.log(`1. b. Title Caps by IIFE Function: Before conversion: ${JSON.stringify(["tHIS iS cAt", "pRInt hEllO wOrLD", "fUlL stACk dEVEloPeR"])} vs After Conversion: ${JSON.stringify(result)}`);
-                })(["tHIS iS cAt", "pRInt hEllO wOrLD", "fUlL stACk dEVEloPeR"])
+                })(["tHIS iS cAt", "pRInt hEllO wOrLD", "fUlL stACk dEVEloPeR"]);
 
                 /*
                     Input: ["tHIS iS cAt", "pRInt hEllO wOrLD", "fUlL stACk dEVEloPeR"]
@@ -106,13 +104,13 @@
         //* Using IIFE function
 
                 //Function definition
-                const sumOfNumbersByIIFEFunction = (function(arr) {
+               (function(arr) {
                     let sum = 0;
                     for(let a of arr) {
                         sum += a;
                     }
                     console.log(`1. c. Sum of array ${JSON.stringify([1, 2, 3, 4, 6, 7])} by IIFE Function is ${sum}`)
-                })([1, 2, 3, 4, 6, 7])
+                })([1, 2, 3, 4, 6, 7]);
 
                 /*
                     Input: [1, 2, 3, 4, 6, 7]
@@ -153,7 +151,7 @@
         //* Using IIFE function
 
                 //Function definition
-                const primeNumbersInArrayByIIFEFunction = (function(arr) {
+                (function(arr) {
                     const primeNumbers = JSON.stringify(arr.filter(function(num) {
                         if (num <= 1) {
                             return false;
@@ -166,8 +164,8 @@
                         return true;
                     }));
 
-                    console.log(`1. d. Prime Numbers of array ${JSON.stringify([1, 2, 3, 4, 6, 7, 8, 9, 10])} by IIFE Function are ${primeNumbers}`)
-                })([1, 2, 3, 4, 6, 7, 8, 9, 10])
+                    console.log(`1. d. Prime Numbers of array ${JSON.stringify([1, 2, 3, 4, 6, 7, 8, 9, 10])} by IIFE Function are ${primeNumbers}`);
+                })([1, 2, 3, 4, 6, 7, 8, 9, 10]);
 
                 /*
                     Input: [1, 2, 3, 4, 6, 7, 8, 9, 10]
@@ -188,7 +186,7 @@
                 }
 
                 //Function call and printing the output to console
-                console.log(`1. e. Palindromes of array ${JSON.stringify(["racecar", "nitin", "rama"])} by Anonymous Function are ${palindromeInArrayByAnonymousFunction(["racecar", "nitin", "rama"])}`)
+                console.log(`1. e. Palindromes of array ${JSON.stringify(["racecar", "nitin", "rama"])} by Anonymous Function are ${palindromeInArrayByAnonymousFunction(["racecar", "nitin", "rama"])}`);
                 
                 /*
                     Input: ["racecar", "nitin", "rama"]
@@ -198,10 +196,10 @@
         //* Using IIFE function
 
                 //Function definition
-                const palindromeInArrayByIIFEFunction = (function(arr) {
+                (function(arr) {
                     const palindrome = arr.filter(a => a.split('').reverse().join('').toLowerCase() === a.toLowerCase());
-                    console.log(`1. e. Palindromes of array ${JSON.stringify(["racecar", "nitin", "rama"])} by IIFE Function are ${JSON.stringify(palindrome)}`)
 
+                    console.log(`1. e. Palindromes of array ${JSON.stringify(["racecar", "nitin", "rama"])} by IIFE Function are ${JSON.stringify(palindrome)}`);
                 })(["racecar", "nitin", "rama"])
 
                 /*
@@ -235,7 +233,7 @@
                 };
 
                 //Function call and printing the output to console
-                console.log(`1. f. Median of arrays ${JSON.stringify([1, 3, 5])} and ${JSON.stringify([2, 4, 6])} by Anonymous Function are ${medianOfArrayByAnonymousFunction([1, 3, 5], [2, 4, 6])}`)
+                console.log(`1. f. Median of arrays ${JSON.stringify([1, 3, 5])} and ${JSON.stringify([2, 4, 6])} by Anonymous Function are ${medianOfArrayByAnonymousFunction([1, 3, 5], [2, 4, 6])}`);
                 
                 /*
                     Input: arr1 = [1, 3, 5], arr2 = [2, 4, 6]
@@ -245,7 +243,7 @@
         //* Using IIFE function
 
                 //Function definition
-                const medianOfArrayByIIFEFunction = (function(arr1, arr2) {
+                (function(arr1, arr2) {
                     const mergedArray = arr1.concat(arr2);
 
                     //Sorting the array
@@ -300,7 +298,7 @@
         //* Using IIFE function
 
                 //Function definition
-                const removeDuplicatesFromArrayByIIFEFunction = (function(arr) {
+                (function(arr) {
                     let unique = new Set();
 
                     for(let a of arr) {
@@ -335,7 +333,7 @@
                 };
 
                 //Function call and printing the output to console
-                console.log(`1. h. Rotating the array ${JSON.stringify([1, 2, 3, 4, 5])} by ${3} times in Anonymous Function: Before Rotation: ${JSON.stringify([1, 2, 3, 4, 5])} vs After Rotation: ${rotateArrayKTimesByAnonymousFunction([1, 2, 3, 4, 5], 3)}`)
+                console.log(`1. h. Rotating the array ${JSON.stringify([1, 2, 3, 4, 5])} by ${3} times in Anonymous Function: Before Rotation: ${JSON.stringify([1, 2, 3, 4, 5])} vs After Rotation: ${rotateArrayKTimesByAnonymousFunction([1, 2, 3, 4, 5], 3)}`);
                 
                 /*
                     Input: [1, 2, 3, 4, 5]
@@ -345,7 +343,7 @@
         //* Using IIFE function
 
                 //Function definition
-                const rotateArrayKTimesByIIFEFunction = (function(arr, k) {
+                (function(arr, k) {
 
                      // Rotate the array k times
                      for (let i = 1; i <= k; i++) {
@@ -353,7 +351,7 @@
                         arr.push(firstElement);
                     }
 
-                    console.log(`1. h. Rotating the array ${JSON.stringify([1, 2, 3, 4, 5])} by ${3} times in IIFE Function: Before Rotation: ${JSON.stringify([1, 2, 3, 4, 5])} vs After Rotation: ${JSON.stringify(arr)}`)
+                    console.log(`1. h. Rotating the array ${JSON.stringify([1, 2, 3, 4, 5])} by ${3} times in IIFE Function: Before Rotation: ${JSON.stringify([1, 2, 3, 4, 5])} vs After Rotation: ${JSON.stringify(arr)}`);
 
                 })([1, 2, 3, 4, 5], 3)
 
